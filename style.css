@@ -1,0 +1,609 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px grey;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(134, 60, 0);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(105, 47, 0);
+}
+:fullscreen {
+  background-color: aqua;
+}
+
+@keyframes hoverNav {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: rgb(134, 60, 0);
+  }
+}
+
+@keyframes munculTotal {
+  0% {
+    transform: scale(0%);
+    /* display: none; */
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
+@keyframes kedut {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(95%);
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  quotes: none;
+  text-decoration: unset;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+html {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 480px;
+  /* width: 320px; */
+}
+
+body {
+  font-family: "Poppins", "Quicksand", "Lora", sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+audio {
+  display: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0;
+  text-decoration: none;
+}
+
+/* ----- NAVBAR START ----- */
+header {
+  margin: auto;
+  display: flex;
+  color: rgb(102, 14, 14);
+  background-color: brown;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar {
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  margin: 2em;
+}
+
+nav {
+  display: flex;
+  text-align: center;
+  padding: 0.4em 0.8em 0;
+  margin: auto;
+  background-color: white;
+  border-radius: 1em;
+  box-shadow: 2px 3px 15px 2px rgb(0, 0, 0, 0.2);
+}
+nav a {
+  margin: 0 1px;
+  padding: 0.4em;
+  color: rgb(134, 60, 0);
+}
+.fa-solid {
+  font-size: 1.3em;
+}
+
+h6 {
+  font-size: 0.55em;
+  font-weight: 400;
+  padding-bottom: 0.2em;
+}
+
+nav a:hover {
+  color: white;
+  border-radius: 3em 3em 0 0;
+  animation: hoverNav 300ms ease-in-out forwards;
+}
+nav a.active,
+nav a:first-child.active {
+  color: white;
+  background-color: rgb(134, 60, 0);
+  border-radius: 3em 3em 0 0;
+}
+/* ----- NAVBAR END ----- */
+
+/* ----- HOME START ----- */
+main {
+  display: inline-block;
+  color: white;
+}
+section {
+  margin: auto;
+  height: 100vh;
+  background-image: url(BG.jpg);
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.87);
+  background-blend-mode: darken;
+  background-position: center;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+}
+
+/* #home .home-content {
+  margin: 0 auto 5em;
+} */
+#home h1 {
+  transform: scale(0%);
+  font-size: 40px;
+  font-weight: bolder;
+  margin-bottom: 15px;
+  animation: munculTotal 1s ease-in-out 1,
+    kedut 1s ease-in-out infinite alternate;
+  animation-delay: 0s, 1s;
+}
+#home p {
+  width: 0%;
+  font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3s steps(50, end) forwards;
+  animation-delay: 1s;
+}
+#home p:last-child {
+  width: 0%;
+  font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3s steps(50, end) forwards;
+  animation-delay: 3s;
+}
+/* ----- HOME END ----- */
+
+/* ----- YOURS START ----- */
+#yours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+#yours div {
+  /* margin: 4vh auto; */
+  overflow: hidden;
+}
+#yours .bar {
+  display: flex;
+  position: sticky;
+  top: 0px;
+  padding: 5vh 0 7vh;
+  flex-direction: column;
+  /* overflow: hidden; */
+  /* background-color: black; */
+}
+#yours .bar ul {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aqua; */
+}
+#yours .bar li {
+  cursor: pointer;
+  color: white;
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 3px solid rgb(134, 60, 0);
+  border-radius: 0.8em;
+}
+#yours .bar li:hover {
+  background-color: rgba(255, 255, 255, 0.103);
+}
+#yours .text {
+  overflow-y: scroll;
+  /* margin: 0 8vh 8vh; */
+  padding: 0 6vh 6vh;
+  border-radius: 2em;
+  height: 70vh;
+  /* background-color: rgb(255, 255, 255); */
+  /* box-shadow: 1px 3px 17px 2px rgb(0, 0, 0, 0.1); */
+}
+#opening h1 {
+  font-size: 30px;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+#yours h3 {
+  /* font-size: 30px; */
+  font-style: italic;
+  margin-bottom: 1em;
+}
+#yours p {
+  /* text-indent: 2em; */
+  font-size: 18px;
+  text-align: justify;
+  margin-bottom: 1em;
+}
+
+.kutipan {
+  font-style: italic;
+  /* font-size: 14px !important; */
+}
+/* #opening, */
+#sekelumit,
+#ditinggalkan,
+#bahagia,
+#bersalah {
+  display: flex;
+  flex-direction: column;
+  padding: 3em 0 0;
+  overflow: hidden;
+  margin: auto;
+  /* height: 70vh; */
+}
+
+#yours #ttd {
+  padding: 2em 0;
+  text-align: right;
+  overflow-y: hidden;
+}
+#yours #ttd p {
+  text-align: right;
+}
+#yours #ttd img {
+  margin: 1em;
+  width: 20%;
+}
+
+@media screen and (max-width: 600px) {
+  #yours .bar {
+    padding: 3vh 0 5vh;
+  }
+  #yours .bar ul {
+    font-size: 10px;
+  }
+  #yours .bar li {
+    border: 2px solid rgb(134, 60, 0);
+  }
+  #yours h1 {
+    font-size: 15px;
+  }
+  #yours p {
+    font-size: 10px;
+  }
+  .kutipan {
+    font-style: italic;
+    font-size: 12px;
+  }
+  #yours #ttd img {
+    margin: 1em;
+    width: 10%;
+  }
+}
+/* ----- YOURS END ----- */
+
+/* ----- GALLERY START ----- */
+/* ----- GALLERY END ----- */
+
+/* ----- INFO START ----- */
+#info {
+  display: flex;
+  flex-direction: column;
+}
+#info div {
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 0.8em;
+  margin: auto;
+  /* background-color: aqua; */
+}
+#info img {
+  transform: scale(95%);
+  width: 15%;
+  margin: 2em 2em 0;
+}
+
+/* ----- INFO END ----- */
+
+/* ----- MODAL START ----- */
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  /* animation: munculTotal 1s ease-in-out 1; */
+}
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 3em;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+  border-radius: 2em;
+  animation: munculTotal 0.5s ease-in-out 1 alternate;
+  -webkit-animation: munculTotal 0.5s ease-in-out 1 alternate;
+}
+.modal-content h3 {
+  text-align: justify;
+  margin-bottom: 1.5em;
+}
+.modal-content p {
+  text-align: justify;
+  margin-bottom: 1.2em;
+}
+button {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 0.6em;
+  padding: 1em 2em;
+  width: max-content;
+  color: white;
+  background-color: rgb(134, 60, 0);
+  -webkit-border-radius: 0.6em;
+  -moz-border-radius: 0.6em;
+  -ms-border-radius: 0.6em;
+  -o-border-radius: 0.6em;
+}
+button:hover {
+  background-color: rgb(105, 47, 0);
+}
+#home button {
+  animation: munculTotal 1s ease-in-out;
+  -webkit-animation: munculTotal 1s ease-in-out;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .modal-content {
+    padding: 2em;
+  }
+  .modal-content h3 {
+    font-size: 15px;
+    margin-bottom: 1.5em;
+  }
+  .modal-content p {
+    font-size: 10px;
+  }
+  button {
+    font-size: 9px;
+    padding: 0.6em 1em;
+  }
+}
+
+.gallery a{
+  color: rgb(218, 111, 129);
+  background-color: white;
+  box-shadow: black;
+  border: solid rgb(0, 0, 0);
+  
+}
+
+.gallery a:hover{
+  background-color: #da7485;
+  color: white;
+  }
+/* ----- MODAL END ----- */
+
+/* ----- GALLERY START ----- */
+#gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  /* background-color: aqua; */
+}
+#gallery div {
+  margin: auto;
+  text-align: center;
+}
+#gallery .gallery-content {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+video {
+  height: 230px;
+  margin-bottom: 1em;
+}
+#gallery h1 {
+  margin-bottom: 1em;
+}
+
+#btnImage {
+  display: flex;
+}
+
+#gallery .mySlides {
+  display: block;
+}
+#gallery img,
+video {
+  vertical-align: middle;
+  width: 100%;
+  object-fit: cover;
+}
+#gallery iframe {
+  vertical-align: middle;
+  width: 400px;
+  height: 225px;
+}
+
+/* Slideshow container */
+#gallery .slideshow-container {
+  /* overflow: hidden; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  max-height: 230px;
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+  margin-bottom: 3px;
+}
+
+/* Next & previous buttons */
+#gallery .prev,
+#gallery .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  /*transition: 0.6s ease;*/
+  border-radius: 0 3px 3px 0;
+  /* user-select: none; */
+}
+
+/* Position the "next button" to the right */
+#gallery .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+#gallery .prev:hover,
+#gallery .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+#gallery .text {
+  color: #f2f2f2;
+  font-size: 10px;
+  padding: 10px 12px;
+  position: absolute;
+  top: 25em;
+  width: 100%;
+  text-align: center;
+  /* background-color: rgba(0, 0, 0, 0.95); */
+}
+
+/* Number text (1/3 etc) */
+#gallery .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+#gallery .dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+#gallery .active,
+#gallery .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+/* ----- GALLERY END ----- */
